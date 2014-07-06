@@ -1,0 +1,114 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link href="{{ asset('bundles/site/css/site.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block entete %}
+	 {{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<div class="content">
+		<div id="forf-block">
+			
+			{{ render(controller('SiteBundle:Site:appelme')) }}
+		
+			<div id="forf--right">
+				
+				<h3 class="etp">Evalué votre budget et envoyé nous votre projet </h3>
+				<fieldset class="dev"> <legend>Budget habillement et décoration:</legend>
+				{{ form_start(form) }}
+				
+				<div>
+				{{ form_errors(form.acc_elle) }}
+				{{ form_label(form.acc_elle) }}  
+				{{ form_widget(form.acc_elle)}}
+				<div class="forf-tarif"><span id="form_acc_elle">0€</span></div>
+				</div>
+				
+				<div>
+				{{ form_errors(form.acc_lui) }}
+				{{ form_label(form.acc_lui) }}
+				{{ form_widget(form.acc_lui) }}
+				<div class="forf-tarif"><span id="form_acc_lui">0€</span></div>
+				</div>
+				
+				<div>
+				{{ form_errors(form.acc_enf) }}
+				{{ form_label(form.acc_enf) }}
+				{{ form_widget(form.acc_enf) }}
+				<div class="forf-tarif"><span id="form_acc_enf">0€</span></div>
+				</div>
+				
+				<div>
+				{{ form_errors(form.deco) }}
+				{{ form_label(form.deco) }}
+				{{ form_widget(form.deco) }}
+				<div class="forf-tarif"><span id="form_deco">0€</span></div>
+				</div>
+				
+				</fieldset>
+				
+				<fieldset class="dev"> <legend>Budget prestataires du mariage:</legend>
+				
+				<div>
+				{{ form_errors(form.invites) }}
+				{{ form_label(form.invites) }}
+				{{ form_widget(form.invites) }}
+				<div class="forf-tarif"><span id="form_invites">0€</span></div>
+				
+				</div>
+				
+				<div>
+				{{ form_errors(form.traiteur) }}
+				{{ form_label(form.traiteur) }}
+				{{ form_widget(form.traiteur) }}
+				<div class="forf-tarif"><span id="form_traiteur">0€</span></div>
+				</div>
+				
+				<div>
+				{{ form_errors(form.fleurs) }}
+				{{ form_label(form.fleurs) }}
+				{{ form_widget(form.fleurs) }}
+				<div class="forf-tarif"><span id="form_fleurs">0€</span></div>
+				</div>
+				
+				<div>
+				{{ form_errors(form.dj) }}
+				{{ form_label(form.dj) }}
+				{{ form_widget(form.dj) }}
+				<div class="forf-tarif"><span id="form_dj">0€</span></div>
+				</div>
+				
+				<div>
+				{{ form_errors(form.photo) }}
+				{{ form_label(form.photo) }}
+				{{ form_widget(form.photo) }}
+				<div class="forf-tarif"><span id="form_photo">0€</span></div>
+				</div>
+				
+				</fieldset>
+				<p class="sup">Total du budget à prevoir : <span class="total-budget">0€</span></p>
+				
+				<fieldset class="dev"> <legend>Vos coordonnées afin de vous fournir une proposition:</legend>
+				{{ form_rest(form) }}
+				</fieldset>
+				<div class="sub_div">
+					<input type="submit" class="submit" name="" value="Transmettre mon projet et enregistrer le PDF"/>
+				</div>
+				
+				{{ form_end(form) }}
+				
+			</div>
+		
+		</div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+	{{ parent() }}
+{% endblock %}
+
+

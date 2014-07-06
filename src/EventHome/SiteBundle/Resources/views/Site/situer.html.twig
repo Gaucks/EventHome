@@ -1,0 +1,45 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link href="{{ asset('bundles/site/css/site.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block entete %}
+	 {{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<div class="content">
+		<div id="forf-block">
+			
+			{{ render(controller('SiteBundle:Site:appelme')) }}
+			
+			<div id="forf--right">
+				<h3 class="etp">Ou nous trouver ?</h3>
+				
+				<h4 class="etp4">Agence dans le var : </h4>
+				
+				<h4 class="adresse">
+					Boulevard de la répudlique,
+					30 chemin de la bastide <br/>
+					83560 Vinon sur verdon
+					<br/>
+					Téléphone : 0674386078
+				</h4>
+				
+				<h4 class="etp4">Agence dans les bouches du rhone : </h4>
+				
+				<h4 class="adresse">
+					Quelque part,
+					30 chemin de la bastide <br/>
+					13090 Aix en provence
+					<br/>
+					Téléphone : 0674386078
+				</h4>
+
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

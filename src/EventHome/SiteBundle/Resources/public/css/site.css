@@ -1,0 +1,282 @@
+div#apl-me{
+	position: relative;
+	margin: 0 auto;
+	width: 70%;
+	max-width: 1000px;
+	margin-top: -30px;
+}
+
+input[type="button"]#btn-contact{
+	float: right;
+	background: #cece1d;
+	border: 1px solid transparent;
+	padding: 10px 20px 10px 20px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 40px 8px 0 0px;
+	cursor: pointer;
+	margin-bottom: -5px;
+}
+
+#apl-me-form{
+	background: #cece1d;
+	border: 1px solid transparent;
+	padding: 10px 20px 10px 20px;
+	width: 330px;
+	position: absolute;
+	right: 0px;
+	top: 32px;
+	border-radius: 0 0 8px 8px;
+	z-index: 100000;	
+}
+
+#apl-me-form label{
+	width: 130px;
+	float: left;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333
+}
+
+#apl-me-form input[type="text"].ct-phone{
+	width: 150px;
+	background: #FFF;
+	border: 1px solid #ccc;
+	float: left;
+}
+
+#apl-me-form input[type="text"].ct-phone:focus{ outline: none; }
+
+#apl-me-form button[type="button"].ct-phone-sub{
+	background: #FFF;
+	border: 1px solid #ccc;
+	padding: 5px 5px 4px 5px;
+	width: 40px;
+	border-radius: 0px 10px 10px 0;
+	margin: -5px 0 0 -7px;
+	border-left: 1px solid #eee;
+	font-weight: bold;
+	outline: none;
+	cursor: pointer;
+}
+
+
+fieldset#cont{
+	width: 330px;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+p.valid{
+	font-weight: bold;
+	margin: 0;
+}
+
+
+/*  */
+
+p#signature{
+	text-align: center;
+	font-style: italic;
+	font-family: 'allura';
+	color: #cece1d;
+	font-size: 2em;
+}
+
+#forf-block{
+	width: 100%;
+	margin-top: 70px;
+}
+
+#forf--right{
+	position: relative;
+	padding: 20px 20px;
+	background-color: rgba(255, 255, 255, 0.9);
+	margin: 0 auto;
+	border: 1px solid #ededed;
+	height: auto;
+	max-height: 450px;
+	width: 70%;
+	max-width: 1000px;
+	border-radius: 10px;
+	box-shadow: 0px 10px 20px 1px #333;
+	overflow: scroll;
+}
+
+fieldset.dev{
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+}
+
+legend{
+	font-weight: bold;
+	color: #cece1d;
+}
+
+input[type="button"].evalu{
+	background: #cece1d;
+	border: 1px solid #ccc;
+	padding: 10px 20px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 8px;
+	float: right;
+	margin-top: 20px;
+	cursor: pointer;		
+}
+
+h4.etp4{
+	border-bottom: 5px solid #cece1d;
+	margin: 20px 0;
+	font-style: italic;
+}
+
+span.form-tarif{
+	float: right;
+	font-weight: bold;
+}
+
+h3.formule-tarif{
+	text-align: center;
+	background: #cece1d;	
+}
+
+span.total-budget{
+	float: right;
+	color: rgba(255,55,230,0.91);
+	margin-right: 17px;
+}
+
+p.descript{
+	line-height: 1.4em;
+	text-align: justify;	
+}
+
+p.sup{
+	color: #cece1d;
+	margin-top: -20px;
+	text-align: justify;	
+}
+
+img.descr-img-rgt{
+	float: right;
+	width: 150px;
+	height: 150px;
+	margin-left: 20px;
+}
+
+img.descr-img-lft{
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin-right:20px;
+}
+
+label.required{
+	width: 450px;
+	display: inline-block;
+	float: left;
+}
+
+select.selecteurs{
+	background: none;
+	border: 1px solid #ccc;
+	height: 20px;
+	width: 250px;
+	display: inline-block;
+}
+
+.forf-tarif{
+	float: right;
+	width: 150px;
+	text-align: right;	
+	margin-top: 0px;
+	color: rgba(255,55,230,0.91);
+	font-weight: bold;
+}
+
+textarea.ident-area{
+	width: 350px;
+	height: 100px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	background: none;
+}
+
+input[type="text"],input[type="email"]{
+	width: 240px;
+	border-radius: 4px;
+	margin-bottom: 5px;
+	background: none;
+	border: 1px solid #ccc;
+	height: 20px;
+	padding-left: 10px;
+}
+
+input[type="submit"].submit{
+	width: 300px;
+	background: #cece1d;
+	border: 1px solid #ccc;
+	padding: 10px 30px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 8px;
+}
+
+.sub_div{
+	width: 300px;
+	margin: 0 auto;
+	margin-bottom: 20px
+}
+
+/* NOUS SITUER */
+
+h4.adresse{
+	text-align: center;
+}
+
+
+/* Staff description */
+
+div.staff-desc{
+	font-size: 1.7em;
+	font-family: 'allura';
+}
+
+div.staff-desc p.desc-perso{
+	text-align: justify;
+}
+
+img.staff-img{
+	float: left;
+	margin-right: 20px;
+}
+
+h4.desc-perso-sign{
+	text-align: right;
+	color: #cece1d;
+}
+
+/* FAQ */
+
+ul.faq-ul{
+	list-style-type: none;
+}
+
+li.faq-li{
+	color: #cece1d;
+	font-weight: bold;
+}
+
+li.faq-li-r{
+	background: #fdfdfd;
+	border: 1px solid #cece1d;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+}
+
+
+
+
+
+

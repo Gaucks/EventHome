@@ -1,0 +1,47 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link href="{{ asset('bundles/site/css/site.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block entete %}
+	 {{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<div class="content">
+		<div id="forf-block">
+		{{ render(controller('SiteBundle:Site:appelme')) }}
+			<div id="forf--right">
+				
+				<h3 class="etp">Formulaire de contact </h3>
+				
+				<h4 class="etp4">Par téléphone</h4>
+				<p style='text-align:center'>Du lundi au samedi de 9h00 à 19h00 <br/> 06.74.38.60.78</p>
+				
+				<h4 class="etp4">Par notre formulaire</h4>
+				
+				<fieldset class="dev"> <legend>Veuillez remplir tous les champs:</legend>
+				
+				{{ form_start(form) }}
+				{{ form_rest(form) }}
+				
+				<br/>
+				<div class="sub_div">
+					<input type="submit" class="submit" name="" value="Transmettre mon message"/>
+				</div>
+				
+				{{ form_end(form) }}
+				</fieldset>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
+
+{% block javascript %}
+	{{ parent() }}
+{% endblock %}

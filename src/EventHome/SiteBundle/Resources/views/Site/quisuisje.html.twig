@@ -1,0 +1,41 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link href="{{ asset('bundles/site/css/site.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block entete %}
+	 {{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<div class="content">
+	
+		<div id="forf-block">
+			
+			{{ render(controller('SiteBundle:Site:appelme')) }}
+			
+			<div id="forf--right">
+			
+				<h4 class="etp4">Amandine Gautier </h4>
+				
+				<img src="{{ asset('bundles/site/images/staff/Amandine.jpg') }}" class="staff-img" alt="Une image" />
+				
+				<div class="staff-desc">
+					<p class="desc-perso">Je suis passioné par la photographie consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p
+					<p class="desc-perso">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+					
+					<p class="desc-perso">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+					
+					<h4 class="desc-perso-sign">Amandine Gautier</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block javascript %}
+	{{ parent() }}
+{% endblock %}

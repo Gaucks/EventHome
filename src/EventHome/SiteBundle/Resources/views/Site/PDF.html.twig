@@ -1,0 +1,152 @@
+<style type="text/css">
+div#title{
+	font-style:italic;
+	margin-bottom: 40px
+}
+
+div#title h1{ font-size: 70px; text-align:center; margin: 0}
+
+div#title p#subtitle{
+	font-size: 26px;
+	color: #cece1d;
+	text-align:center;
+	margin-top: -10px;
+	margin-bottom: 70px;
+}
+
+div#adress{
+	font-style:italic;
+}
+
+div#adress p.add-title{
+	color: #cece1d;
+	font-size:16px;
+	margin: 0;
+}
+
+div#adress p.add{
+	font-size:14px;
+	margin: 0 10px 0 0;
+	text-transform:lowercase;
+}
+
+div#content{
+	margin: 240px 0 0 0;
+}
+
+div#content h3{
+	margin: 0 0 10px 0;
+}
+
+table{
+	width: 100%;
+	border: 1px solid #333;
+}
+
+table#total{
+	width: 100%;
+	border: none;
+}
+
+tr{ border-collapse:collapse; }
+
+td.desc{ width: 80%; text-align:center; background: #cece1d; }
+td.tarif{ width: 20%; text-align:center; background: #cece1d;}
+
+td.desc_ct{ width: 80%;text-align:left; padding: 5px 0 5px 20px }
+td.tarif_ct{ width: 20%; text-align:right; padding: 5px 20px 5px 0px}
+
+td.desc_ct2{ width: 80%;text-align:left; background: #eee; padding: 5px 0 5px 20px}
+td.tarif_ct2{ width: 20%; text-align:right; background: #eee; padding: 5px 20px 5px 0px }
+
+div#footer{
+	with:100%;
+	padding-top: 5px;
+	border-top: 2px solid #cece1d;
+	font-size: 12px;
+	text-align:center;
+}
+
+div#content_desc{
+	margin-top: 30px;
+}
+</style>
+
+
+<page orientation="portrait" format="A4">
+	
+	 <page_header> 
+	 		<div id="title">
+	 			<h1>{{ name }}</h1> 
+	 			<p id="subtitle">Amandine Gautier</p>
+	 		</div>
+	 		
+	 		<div id="adress"> 
+		 			<p class="add-title">{{ nom }} {{ prenom }}</p>
+		 			<p class="add">{{ adress }}</p>
+		 			<p class="add">{{ ville }}</p>
+		 			<p class="add">Tel: {{ phone }}</p>
+		 			<p class="add">Mail: {{ email }}</p>
+	 			</div>
+	 		
+       </page_header>
+      
+      <div id="content">
+      	<h3>Récapitulatif de votre budget : </h3>
+      	
+      	<table>
+      		<tr>
+      		<td class="desc">Description</td>
+      		<td class="tarif">Budget</td>
+      		</tr>
+      		<tr>
+      		<td class="desc_ct">Robe, bijoux et accessoires pour la marié :</td>
+      		<td class="tarif_ct">{{ elle |number_format(2, '.', ',') }}€</td>
+      		</tr>
+      		<tr>
+      		<td class="desc_ct2">Costume et accessoires pour le marié :</td>
+      		<td class="tarif_ct2">{{ lui |number_format(2, '.', ',') }}€</td>
+      		</tr>
+      		<tr>
+      		<td class="desc_ct">Costume et accessoires pour les enfants :</td>
+      		<td class="tarif_ct">{{ enf |number_format(2, '.', ',') }}€</td>
+      		</tr>
+      		<tr>
+      		<td class="desc_ct2">Traiteur, restauration diverse :</td>
+      		<td class="tarif_ct2">{{ traiteur |number_format(2, '.', ',') }}€</td>
+      		</tr>
+      		<tr>
+      		<td class="desc_ct">Pour le fleuriste :</td>
+      		<td class="tarif_ct">{{ fleur |number_format(2, '.', ',') }}€</td>
+      		</tr>
+      		<tr>
+      		<td class="desc_ct2">Un photographe professionnel :</td>
+      		<td class="tarif_ct2">{{ photo |number_format(2, '.', ',') }}€</td>
+      		</tr>
+      		<tr>
+      		<td class="desc_ct">Un D.J. ou un orchestre animera notre soirée :</td>
+      		<td class="tarif_ct">{{ dj |number_format(2, '.', ',') }}€</td>
+      		</tr>
+      	</table>
+      	<br />
+      	<table id="total">
+      		<tr>
+      		<td class="desc_ct">Budget que vous allouez à votre évenement : </td>
+      		<td class="tarif_ct"><strong>{{ total |number_format(2, '.', ',') }}€</strong></td>
+      		</tr>
+      	</table>
+      		
+      </div>
+      
+      <div id="content_desc">
+      	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      
+      
+     <page_footer> 
+     <div id="footer">
+     	SARL EventHome - 30 chemin de la bastide - 83560 Vinon sur verdon - Tél : 0674386078 - Contact@event-home.com  
+     </div>
+     	</page_footer> 
+
+</page>

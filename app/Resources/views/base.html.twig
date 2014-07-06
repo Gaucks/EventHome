@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}EventHome - Wedding Planer sur Manosque et Aix en provence {% endblock %}</title>
+        {% block stylesheets %}
+	        {% stylesheets filter='cssrewrite''bundles/site/css/style.css' %}
+	        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+	        {% endstylesheets %}
+        {% endblock %}
+        
+        {% javascripts '@SiteBundle/Resources/public/js/*' %}
+			<script type="text/javascript" src="{{ asset_url }}"></script>
+			{% endjavascripts %}
+        
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    	<div id="site">
+    	
+        	<img src="{{ asset('bundles/site/images/bg/bg1.jpg') }}" class="bgfade" alt="Une image" />
+        	<img src="{{ asset('bundles/site/images/bg/bg7.jpg') }}" class="bgfade" alt="Une image" />
+        	<img src="{{ asset('bundles/site/images/bg/bg6.jpg') }}" class="bgfade" alt="Une image" />
+        	<img src="{{ asset('bundles/site/images/bg/bg3.jpg') }}" class="bgfade" alt="Une image" />
+        	<img src="{{ asset('bundles/site/images/bg/bg2.jpg') }}" class="bgfade" alt="Une image" />
+        	
+        {% block entete %}
+        <a href="{{ path('site_homepage') }}" alt="Homepage"  class="title"/>
+        	<div id="entete">
+	        	<h1 id="title">EventHome - Wedding Planer</h1>
+				<p id="title">Amandine Gautier</p>
+			</div>
+    	</a>
+    	
+    	{% for flashMessage in app.session.flashbag.get('notice') %}
+		<div class="flash-notice">
+        {{ flashMessage }}
+		</div>
+		{% endfor %}
+        
+        
+        {% endblock %}
+        
+        {% block body %}{% endblock %}
+        
+        
+		{% block nav %}
+			<div id="footer">
+			{{ render(controller("SiteBundle:Site:nav")) }}
+			</div>
+		{% endblock %}
+        
+        
+       {% block javascript %}
+		<script type="text/javascript" src="{{ asset('bundles/site/js/bg-change.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('bundles/site/js/site-action.js') }}"></script>
+		{% endblock %}
+        
+        </div>
+    </body>
+</html>

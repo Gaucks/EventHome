@@ -1,0 +1,38 @@
+<div id="apl-me">
+	<input type="button" id="btn-contact" name="" value="Faites vous appeler" />
+	
+	<div id="apl-me-form">
+		<fieldset id="cont">
+		{{ form_start(form) }}
+		{{ form_rest(form) }}
+		{{ form_end(form) }}
+		</fieldset>
+	</div>
+	<div id="result"></div>
+</div>
+
+<script type="text/javascript">
+	$('#form_Ok').click(function(){
+
+		$field = $('input#form_phone');
+			
+			if($field.val().length>=10)
+			{
+				$.ajax({
+					type: "POST",
+					url: "{{ path('site_ajax_appel_me')}}",
+					data: 'phone='+$('input#form_phone').val(),
+					
+					beforeSend:function(){
+					$('fieldset#cont').slideUp('slow');
+					},
+
+					success: function(data){
+						$('fieldset#cont').slideDown('slow').html(data);
+					}
+				});
+			}
+		});
+</script>
+
+

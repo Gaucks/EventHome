@@ -1,0 +1,49 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link href="{{ asset('bundles/site/css/site.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block entete %}
+	 {{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<div class="content">
+		<div id="forf-block">
+			{{ render(controller('SiteBundle:Site:appelme')) }}
+			<div id="forf--right">
+
+				<h3 class="etp">Forum aux questions</h3>
+				
+				<h4 class="etp4">Essayons de répondre à un maximum de vos questions </h4>
+				
+				<ul class="faq-ul">
+					<li class="faq-li" id="Q-1">Pourquoi prendre un organisateur d'évenement ?</li>
+					<li class="faq-li-r" id="R-1">Pour pas te prendre la tete connard!</li>
+					<li class="faq-li" id="Q-2">Pourquoi prendre un organisateur d'évenement ?</li>
+					<li class="faq-li-r" id="R-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</li>
+					<li class="faq-li" id="Q-3">Pourquoi prendre un organisateur d'évenement ?</li>
+					<li class="faq-li-r" id="R-3">pour pas te prendre la tete connard!</li>
+					<li class="faq-li" id="Q-4">Pourquoi prendre un organisateur d'évenement ?</li>
+					<li class="faq-li-r" id="R-4">Pour pas te prendre la tete connard!</li>
+					<li class="faq-li" id="Q-5">Pourquoi prendre un organisateur d'évenement ?</li>
+					<li class="faq-li-r" id="R-5"> Pour pas te prendre la tete connard!</li>
+					<li class="faq-li" id="Q-6">Pourquoi prendre un organisateur d'évenement ?</li>
+					<li class="faq-li-r" id="R-6">Pour pas te prendre la tete connard!</li>
+					<li class="faq-li" id="Q-7">Pourquoi prendre un organisateur d'évenement ?</li>
+					<li class="faq-li-r" id="R-7">Pour pas te prendre la tete connard!</li>
+					<li class="faq-li" id="Q-8">Pourquoi prendre un organisateur d'évenement ?</li>
+					<li class="faq-li-r" id="R-8">Pour pas te prendre la tete connard!</li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
+
+{% block javascript %}
+	{{ parent() }}
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link href="{{ asset('bundles/site/css/site.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block entete %}
+	 {{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<div class="content">
+		<div id="forf-block">
+		
+			{{ render(controller('SiteBundle:Site:appelme')) }}
+			
+			<div id="forf--right">
+			
+				<a href="{{ path('site_evalu') }}" alt="Evaluer votre budget" />
+					<input type="button" class="evalu" name="evalu" value="Evaluer votre budget"/>
+				</a>
+				
+				<h3 class="etp">Choisissez la formule qui vous correspond</h3>
+				
+				<h4 class="etp4">La formule tout inclus <span class="form-tarif">Tarif: 1200€</span></h4>
+				
+				<p class="descript">
+				
+				<img src="{{ asset('bundles/site/images/bg/bg5.jpg') }}" class="descr-img-rgt" alt="Une image" />
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<p class="more" id="all-inclus">Afficher plus d'informations...</p>
+				<p class="more" id="all-inclus-moins">Afficher moins d'informations...</p>
+				
+				{{ include('SiteBundle:Site:all-inclus.html.twig') }}
+				
+				<h4 class="etp4">La formule à la carte <span class="form-tarif">Tarif : 1500€</span></h4>
+				
+				<p class="descript">
+				<img src="{{ asset('bundles/site/images/bg/bg1.jpg') }}" class="descr-img-lft" alt="Une image" />
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+				<p class="more" id="all-at-card">Afficher plus d'informations...</p>
+				<p class="more" id="all-at-card-moins">Afficher moins d'informations...</p>
+				
+				{{ include('SiteBundle:Site:all-at-card.html.twig') }}			
+			</div>
+		
+		</div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+	{{ parent() }}
+	<script type="text/javascript" src="{{ asset('bundles/site/js/more.js') }}"></script>
+{% endblock %}
+
+

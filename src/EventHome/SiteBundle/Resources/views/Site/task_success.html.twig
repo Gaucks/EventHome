@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link href="{{ asset('bundles/site/css/site.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block entete %}
+	 {{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<div class="content">
+		<div id="forf-block">
+			
+			{{ render(controller('SiteBundle:Site:appelme')) }}
+			
+			<div id="forf--right">
+			
+			<h3>Merci, votre demande à bien été prise en compte, une réponse vous sera apporté dans les 24heures.</h3>
+			<p id="signature">Cordialement, Amandine Gautier</p>
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
+
+{% block javascript %}
+	<script type="text/javascript" src="{{ asset('bundles/site/js/bg-change.js') }}"></script>
+{% endblock %}

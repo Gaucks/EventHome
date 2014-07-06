@@ -1,0 +1,43 @@
+site_homepage:
+    path:     /
+    defaults: { _controller: SiteBundle:Site:index }
+
+site_forfaits:
+    path:     /forfaits
+    defaults: { _controller: SiteBundle:Site:forfaits }
+
+site_evalu:
+    path:     /estimation-budget
+    defaults: { _controller: SiteBundle:Site:evalu }
+
+site_situer:
+    path:     /situer-nous
+    defaults: { _controller: SiteBundle:Site:situer }
+
+site_contact:
+    path:     /contact
+    defaults: { _controller: SiteBundle:Site:contact }
+    
+site_toPdf:
+    path:     /PDF
+    defaults: { _controller: SiteBundle:Site:toPdf }
+
+site_taskSuccess:
+    path:     /success
+    defaults: { _controller: SiteBundle:Site:taskSuccess }
+
+site_quisuisje:
+    path:     /amandine_gautier
+    defaults: { _controller: SiteBundle:Site:quisuisje }
+
+site_faq:
+    path:     /faq
+    defaults: { _controller: SiteBundle:Site:faq }
+
+site_appel_me:
+    path:     /appel
+    defaults: { _controller: SiteBundle:Site:appelme }
+
+site_ajax_appel_me:
+    path:     /appel_me
+    defaults: { _controller: SiteBundle:Site:ajaxAppelme }
